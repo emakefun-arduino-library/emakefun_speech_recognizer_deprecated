@@ -1,4 +1,4 @@
-# Emakefun Gesture Recognizer
+# Emakefun Speech Recognizer
 
 这个Arduino库是用于使用`emakefun`的语音识别传感器
 
