@@ -1,0 +1,29 @@
+#######################################
+# Classes, datatypes (KEYWORD1)
+#######################################
+
+SpeechRecognizer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Setup	KEYWORD2
+SetActivationMode	KEYWORD2
+SetTimeout	KEYWORD2
+AddIdentification	KEYWORD2
+GetResult	KEYWORD2
+IsActivated	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+kDeviceI2cAddress	LITERAL1
+
+kAutoStart	LITERAL1
+kKeyWordTrigger	LITERAL1
+kButtonTrigger	LITERAL1
+
+kResultTimeout	LITERAL1
+kResultNone	LITERAL1

@@ -1,0 +1,10 @@
+@INCLUDE_PATH  = doxygen
+@INCLUDE = base.cfg
+PROJECT_NAME     = "Emakefun Speech Recognizer"
+PROJECT_NUMBER   = 2.0
+ENABLED_SECTIONS = Chinese
+OUTPUT_LANGUAGE  = Chinese
+INPUT            = src \
+                 = examples/button_trigger/button_trigger.ino \
+                   examples/keyword_trigger/keyword_trigger.ino \
+                   examples/loop_recognition/loop_recognition.ino
