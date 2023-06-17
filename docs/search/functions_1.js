@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getresult_0',['GetResult',['../class_speech_recognizer.html#a0f18e83dce736dfc2056d62df3ac4383',1,'SpeechRecognizer']]]
+  ['readevent_0',['ReadEvent',['../class_speech_recognizer.html#a6182e9704116584e15287329147b22a6',1,'SpeechRecognizer']]],
+  ['readresult_1',['ReadResult',['../class_speech_recognizer.html#a7c9b577f042603122c1248c8a2255915',1,'SpeechRecognizer']]]
 ];

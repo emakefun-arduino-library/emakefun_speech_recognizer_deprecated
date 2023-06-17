@@ -21,15 +21,15 @@ enum DataAddress : uint8_t {
   kDataAddressTimeout = 0x04,
   kDataAddressIdentificationData = 0x05,
   kDataAddressIdentificationLength = 0x37,
-  kDataAddressResult = 0x38,
-  kDataAddressIsActivated = 0x39,
+  kDataAddressEvent = 0x38,
+  kDataAddressResult = 0x39,
 };
 
 enum Command : uint8_t {
   kCommandNone = 0,
   kReset,
   kAddIdentification,
-  kSetActivationMode,
+  kSetTrigger,
   kSetTimeout,
 };
 }  // namespace
@@ -50,12 +50,12 @@ bool SpeechRecognizer::Setup() {
   return Write(kDataAddressCommand, kReset) == 0 && Write(kDataAddressCommandFlag, kCommandSendCompleted) == 0;
 }
 
-void SpeechRecognizer::SetActivationMode(const ActivationMode speech_recognition_mode) {
+void SpeechRecognizer::SetTrigger(const Trigger trigger) {
   while (!CanSendCommand()) {
     yield();
   }
 
-  Write(kDataAddressCommand, {static_cast<uint8_t>(kSetActivationMode), static_cast<uint8_t>(speech_recognition_mode)});
+  Write(kDataAddressCommand, {static_cast<uint8_t>(kSetTrigger), static_cast<uint8_t>(trigger)});
   Write(kDataAddressCommandFlag, kCommandSendCompleted);
 }
 
@@ -75,17 +75,19 @@ void SpeechRecognizer::AddIdentification(const uint8_t index, const String& iden
   }
 
   Write(kDataAddressCommand, {static_cast<uint8_t>(kAddIdentification), index});
-  Write(kDataAddressIdentificationData, reinterpret_cast<const uint8_t*>(identification.c_str()), min(255, identification.length()));
+  Write(kDataAddressIdentificationData,
+        reinterpret_cast<const uint8_t*>(identification.c_str()),
+        min(255, identification.length()));
   Write(kDataAddressIdentificationLength, min(255, identification.length()));
   Write(kDataAddressCommandFlag, kCommandSendCompleted);
 }
 
-int8_t SpeechRecognizer::GetResult() {
-  return Read(kDataAddressResult, kResultNone);
+uint8_t SpeechRecognizer::ReadResult() {
+  return Read(kDataAddressResult);
 }
 
-bool SpeechRecognizer::IsActivated() {
-  return Read(kDataAddressIsActivated, 0) == 1;
+SpeechRecognizer::Event SpeechRecognizer::ReadEvent() {
+  return static_cast<SpeechRecognizer::Event>(Read(kDataAddressEvent, kEventNone));
 }
 
 bool SpeechRecognizer::CanSendCommand() {

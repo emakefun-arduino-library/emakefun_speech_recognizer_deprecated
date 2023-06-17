@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Emakefun Speech Recognizer: trigger_button_and_keyword.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Emakefun Speech Recognizer<span id="projectnumber">&#160;2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">trigger_button_and_keyword.ino</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @example trigger_button_and_keyword.ino</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;speech_recognizer.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="class_speech_recognizer.html">SpeechRecognizer</a> speech_recognizer(0x30);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">  Serial.begin(115200);</div>
+<div class="line">  speech_recognizer.<a id="a1" name="a1"></a><a class="code hl_function" href="class_speech_recognizer.html#accc3d0db61391f9adaf15d0fc3b50b6d">Setup</a>();</div>
+<div class="line">  speech_recognizer.<a id="a2" name="a2"></a><a class="code hl_function" href="class_speech_recognizer.html#ae4c61b08a3494d01e0478fa27ff44e93">SetTrigger</a>(<a id="a3" name="a3"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950">SpeechRecognizer::kTriggerButton</a> | <a id="a4" name="a4"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93">SpeechRecognizer::kTriggerKeyword</a>);</div>
+<div class="line">  speech_recognizer.<a id="a5" name="a5"></a><a class="code hl_function" href="class_speech_recognizer.html#aaf329f57c2926af736fe49b977038e1b">SetTimeout</a>(10000);  <span class="comment">// 10000ms</span></div>
+<div class="line">  speech_recognizer.<a id="a6" name="a6"></a><a class="code hl_function" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a>(0, F(<span class="stringliteral">&quot;xiao yi xiao yi&quot;</span>));</div>
+<div class="line">  speech_recognizer.<a class="code hl_function" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a>(1, F(<span class="stringliteral">&quot;bei jing&quot;</span>));</div>
+<div class="line">  speech_recognizer.<a class="code hl_function" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a>(2, F(<span class="stringliteral">&quot;chong qin&quot;</span>));</div>
+<div class="line">  speech_recognizer.<a class="code hl_function" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a>(3, F(<span class="stringliteral">&quot;cheng du&quot;</span>));</div>
+<div class="line">  Serial.println(<span class="stringliteral">&quot;setup done&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  <span class="keywordflow">switch</span> (speech_recognizer.<a id="a7" name="a7"></a><a class="code hl_function" href="class_speech_recognizer.html#a6182e9704116584e15287329147b22a6">ReadEvent</a>()) {</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a8" name="a8"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d">SpeechRecognizer::kEventWaitForTrigger</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventWaitForTrigger&quot;</span>));</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a9" name="a9"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7">SpeechRecognizer::kEventRecognizeSuccess</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventRecognizeSuccess&quot;</span>));</div>
+<div class="line">      <span class="keyword">auto</span> result = speech_recognizer.<a id="a10" name="a10"></a><a class="code hl_function" href="class_speech_recognizer.html#a7c9b577f042603122c1248c8a2255915">ReadResult</a>();</div>
+<div class="line">      Serial.print(<span class="stringliteral">&quot;result:&quot;</span>);</div>
+<div class="line">      Serial.println(result);</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a11" name="a11"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4">SpeechRecognizer::kEventStartRecognizing</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventStartRecognizing&quot;</span>));</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a12" name="a12"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4">SpeechRecognizer::kEventRecognizeTimeout</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventRecognizeTimeout&quot;</span>));</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a13" name="a13"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948">SpeechRecognizer::kEventTriggeredByButton</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventTriggeredByButton&quot;</span>));</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">case</span> <a id="a14" name="a14"></a><a class="code hl_enumvalue" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46">SpeechRecognizer::kEventTriggeredByKeyword</a>: {</div>
+<div class="line">      Serial.println(F(<span class="stringliteral">&quot;kEventTriggeredByKeyword&quot;</span>));</div>
+<div class="line">      <span class="comment">// do something</span></div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">default</span>: {</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_speech_recognizer_html"><div class="ttname"><a href="class_speech_recognizer.html">SpeechRecognizer</a></div><div class="ttdoc">语音识别模块控制类</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:11</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_a41a88c6c9d2f5806dd1a190bb5323c5a"><div class="ttname"><a href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">SpeechRecognizer::AddIdentification</a></div><div class="ttdeci">void AddIdentification(const uint8_t index, const String &amp;identification)</div><div class="ttdoc">添加语音识别索引词</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:72</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_a6182e9704116584e15287329147b22a6"><div class="ttname"><a href="class_speech_recognizer.html#a6182e9704116584e15287329147b22a6">SpeechRecognizer::ReadEvent</a></div><div class="ttdeci">Event ReadEvent()</div><div class="ttdoc">读取事件</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:89</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_a7c9b577f042603122c1248c8a2255915"><div class="ttname"><a href="class_speech_recognizer.html#a7c9b577f042603122c1248c8a2255915">SpeechRecognizer::ReadResult</a></div><div class="ttdeci">uint8_t ReadResult()</div><div class="ttdoc">获取语音识别结果，通过 ReadEvent() 检测到识别成功( SpeechRecognizer::kEventRecognizeSuccess )的事件后再调用</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:85</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93"><div class="ttname"><a href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93">SpeechRecognizer::kTriggerKeyword</a></div><div class="ttdeci">@ kTriggerKeyword</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:26</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950"><div class="ttname"><a href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950">SpeechRecognizer::kTriggerButton</a></div><div class="ttdeci">@ kTriggerButton</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:25</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_aaf329f57c2926af736fe49b977038e1b"><div class="ttname"><a href="class_speech_recognizer.html#aaf329f57c2926af736fe49b977038e1b">SpeechRecognizer::SetTimeout</a></div><div class="ttdeci">void SetTimeout(const uint32_t timeout_ms)</div><div class="ttdoc">设置识别超时时间, 对自动触发( SpeechRecognizer::kTriggerAuto )无效</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:62</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_accc3d0db61391f9adaf15d0fc3b50b6d"><div class="ttname"><a href="class_speech_recognizer.html#accc3d0db61391f9adaf15d0fc3b50b6d">SpeechRecognizer::Setup</a></div><div class="ttdeci">bool Setup() override</div><div class="ttdoc">初始化函数</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:40</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_ae4c61b08a3494d01e0478fa27ff44e93"><div class="ttname"><a href="class_speech_recognizer.html#ae4c61b08a3494d01e0478fa27ff44e93">SpeechRecognizer::SetTrigger</a></div><div class="ttdeci">void SetTrigger(const Trigger trigger)</div><div class="ttdoc">设置触发器</div><div class="ttdef"><b>Definition</b> speech_recognizer.cpp:53</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948">SpeechRecognizer::kEventTriggeredByButton</a></div><div class="ttdeci">@ kEventTriggeredByButton</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:39</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46">SpeechRecognizer::kEventTriggeredByKeyword</a></div><div class="ttdeci">@ kEventTriggeredByKeyword</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:40</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d">SpeechRecognizer::kEventWaitForTrigger</a></div><div class="ttdeci">@ kEventWaitForTrigger</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:35</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4">SpeechRecognizer::kEventRecognizeTimeout</a></div><div class="ttdeci">@ kEventRecognizeTimeout</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:38</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7">SpeechRecognizer::kEventRecognizeSuccess</a></div><div class="ttdeci">@ kEventRecognizeSuccess</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:37</div></div>
+<div class="ttc" id="aclass_speech_recognizer_html_afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4"><div class="ttname"><a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4">SpeechRecognizer::kEventStartRecognizing</a></div><div class="ttdeci">@ kEventStartRecognizing</div><div class="ttdef"><b>Definition</b> speech_recognizer.h:36</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

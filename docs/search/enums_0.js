@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['activationmode_0',['ActivationMode',['../class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596',1,'SpeechRecognizer']]]
+  ['event_0',['Event',['../class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1',1,'SpeechRecognizer']]]
 ];

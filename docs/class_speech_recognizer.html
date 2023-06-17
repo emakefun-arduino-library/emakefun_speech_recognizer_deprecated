@@ -93,17 +93,25 @@ Public 类型</h2></td></tr>
 <tr class="memitem:abf10c4531059c929ef1a307a3aa97458"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="class_speech_recognizer.html#abf10c4531059c929ef1a307a3aa97458a2ceaa5071a691602edf817af9e4b397e">kDeviceI2cAddress</a> = 0x30
  }</td></tr>
 <tr class="separator:abf10c4531059c929ef1a307a3aa97458"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2ab67c9c38ca30b0af98d11e2d1c596"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">ActivationMode</a> : uint8_t { <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596a181db7041e8ee678a10df5c194020cad">kAutoStart</a> = 0
-, <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596a4fb2cdbf07352434397c353241bcfe76">kKeyWordTrigger</a>
-, <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596a2f37d274ea0606cd9148b8c130b1dbdf">kButtonTrigger</a>
+<tr class="memitem:a7de8027579499b036108cbbe404d3bb1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">Trigger</a> : uint8_t { <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a7b2419b9830a6e4e53a0440d4c1e54d3">kTriggerAuto</a> = 0
+, <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950">kTriggerButton</a> = 1 &lt;&lt; 0
+, <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93">kTriggerKeyword</a> = 1 &lt;&lt; 1
  }</td></tr>
-<tr class="memdesc:aa2ab67c9c38ca30b0af98d11e2d1c596"><td class="mdescLeft">&#160;</td><td class="mdescRight">激活模式  <a href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">更多...</a><br /></td></tr>
-<tr class="separator:aa2ab67c9c38ca30b0af98d11e2d1c596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac42517153137bd3b19356a89ee3de35a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35a">Result</a> : int8_t { <a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35aa691ff0d8e7712d15f3a3f26df45c8afe">kResultTimeout</a> = -2
-, <a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35aa64b704569c300cc7e09374b1cd3ec205">kResultNone</a> = -1
+<tr class="memdesc:a7de8027579499b036108cbbe404d3bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发器  <a href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">更多...</a><br /></td></tr>
+<tr class="separator:a7de8027579499b036108cbbe404d3bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0a2cdc1429b3e4efc0ea8bbdcf59c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">Event</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ac7bcf63e8e81d3c706a7848cdbde1396">kEventNone</a> = 0
+, <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d">kEventWaitForTrigger</a>
+, <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4">kEventStartRecognizing</a>
+, <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7">kEventRecognizeSuccess</a>
+, <br />
+&#160;&#160;<a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4">kEventRecognizeTimeout</a>
+, <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948">kEventTriggeredByButton</a>
+, <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46">kEventTriggeredByKeyword</a>
+<br />
  }</td></tr>
-<tr class="memdesc:ac42517153137bd3b19356a89ee3de35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音识别结果  <a href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35a">更多...</a><br /></td></tr>
-<tr class="separator:ac42517153137bd3b19356a89ee3de35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:afe0a2cdc1429b3e4efc0ea8bbdcf59c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件类型  <a href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">更多...</a><br /></td></tr>
+<tr class="separator:afe0a2cdc1429b3e4efc0ea8bbdcf59c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -117,25 +125,25 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
 <tr class="memitem:accc3d0db61391f9adaf15d0fc3b50b6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#accc3d0db61391f9adaf15d0fc3b50b6d">Setup</a> () override</td></tr>
 <tr class="memdesc:accc3d0db61391f9adaf15d0fc3b50b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化函数  <br /></td></tr>
 <tr class="separator:accc3d0db61391f9adaf15d0fc3b50b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1f172d193c4b399a537ec5be7c74bcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#ac1f172d193c4b399a537ec5be7c74bcf">SetActivationMode</a> (const <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">ActivationMode</a> speech_recognition_mode)</td></tr>
-<tr class="memdesc:ac1f172d193c4b399a537ec5be7c74bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置激活模式  <br /></td></tr>
-<tr class="separator:ac1f172d193c4b399a537ec5be7c74bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c61b08a3494d01e0478fa27ff44e93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#ae4c61b08a3494d01e0478fa27ff44e93">SetTrigger</a> (const <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">Trigger</a> trigger)</td></tr>
+<tr class="memdesc:ae4c61b08a3494d01e0478fa27ff44e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置触发器  <br /></td></tr>
+<tr class="separator:ae4c61b08a3494d01e0478fa27ff44e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf329f57c2926af736fe49b977038e1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#aaf329f57c2926af736fe49b977038e1b">SetTimeout</a> (const uint32_t timeout_ms)</td></tr>
-<tr class="memdesc:aaf329f57c2926af736fe49b977038e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置操作超时时间  <br /></td></tr>
+<tr class="memdesc:aaf329f57c2926af736fe49b977038e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置识别超时时间, 对自动触发( <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a7b2419b9830a6e4e53a0440d4c1e54d3">SpeechRecognizer::kTriggerAuto</a> )无效  <br /></td></tr>
 <tr class="separator:aaf329f57c2926af736fe49b977038e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a88c6c9d2f5806dd1a190bb5323c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a> (const uint8_t index, const String &amp;identification)</td></tr>
 <tr class="memdesc:a41a88c6c9d2f5806dd1a190bb5323c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加语音识别索引词  <br /></td></tr>
 <tr class="separator:a41a88c6c9d2f5806dd1a190bb5323c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f18e83dce736dfc2056d62df3ac4383"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a0f18e83dce736dfc2056d62df3ac4383">GetResult</a> ()</td></tr>
-<tr class="memdesc:a0f18e83dce736dfc2056d62df3ac4383"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取语音识别结果  <br /></td></tr>
-<tr class="separator:a0f18e83dce736dfc2056d62df3ac4383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012a13177239c3a6f708f7fe47c4cc95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a012a13177239c3a6f708f7fe47c4cc95">IsActivated</a> ()</td></tr>
-<tr class="memdesc:a012a13177239c3a6f708f7fe47c4cc95"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询是否已激活  <br /></td></tr>
-<tr class="separator:a012a13177239c3a6f708f7fe47c4cc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9b577f042603122c1248c8a2255915"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a7c9b577f042603122c1248c8a2255915">ReadResult</a> ()</td></tr>
+<tr class="memdesc:a7c9b577f042603122c1248c8a2255915"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取语音识别结果，通过 <a class="el" href="class_speech_recognizer.html#a6182e9704116584e15287329147b22a6">ReadEvent()</a> 检测到识别成功( <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7">SpeechRecognizer::kEventRecognizeSuccess</a> )的事件后再调用  <br /></td></tr>
+<tr class="separator:a7c9b577f042603122c1248c8a2255915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6182e9704116584e15287329147b22a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_speech_recognizer.html#a6182e9704116584e15287329147b22a6">ReadEvent</a> ()</td></tr>
+<tr class="memdesc:a6182e9704116584e15287329147b22a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取事件  <br /></td></tr>
+<tr class="separator:a6182e9704116584e15287329147b22a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>语音识别模块控制类 </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#_a0">button_trigger.ino</a>, <a class="el" href="keyword_trigger_8ino-example.html#_a0">keyword_trigger.ino</a> , 以及 <a class="el" href="loop_recognition_8ino-example.html#_a0">loop_recognition.ino</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#_a0">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#_a0">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#_a0">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#_a0">trigger_keyword.ino</a>.</dd>
 </dl>
 </div><h2 class="groupheader">成员枚举类型说明</h2>
 <a id="abf10c4531059c929ef1a307a3aa97458" name="abf10c4531059c929ef1a307a3aa97458"></a>
@@ -156,47 +164,57 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
 
 </div>
 </div>
-<a id="aa2ab67c9c38ca30b0af98d11e2d1c596" name="aa2ab67c9c38ca30b0af98d11e2d1c596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2ab67c9c38ca30b0af98d11e2d1c596">&#9670;&#160;</a></span>ActivationMode</h2>
+<a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">&#9670;&#160;</a></span>Event</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">SpeechRecognizer::ActivationMode</a> : uint8_t</td>
+          <td class="memname">enum <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">SpeechRecognizer::Event</a> : uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>激活模式 </p>
+<p>事件类型 </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aa2ab67c9c38ca30b0af98d11e2d1c596a181db7041e8ee678a10df5c194020cad" name="aa2ab67c9c38ca30b0af98d11e2d1c596a181db7041e8ee678a10df5c194020cad"></a>kAutoStart&#160;</td><td class="fielddoc"><p>自动激活模式 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ac7bcf63e8e81d3c706a7848cdbde1396" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ac7bcf63e8e81d3c706a7848cdbde1396"></a>kEventNone&#160;</td><td class="fielddoc"><p>无任何事件 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa2ab67c9c38ca30b0af98d11e2d1c596a4fb2cdbf07352434397c353241bcfe76" name="aa2ab67c9c38ca30b0af98d11e2d1c596a4fb2cdbf07352434397c353241bcfe76"></a>kKeyWordTrigger&#160;</td><td class="fielddoc"><p>关键词触发激活模式 </p>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a63995a1b29a4f39efb1a74fda89e245d"></a>kEventWaitForTrigger&#160;</td><td class="fielddoc"><p>等待触发唤醒 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa2ab67c9c38ca30b0af98d11e2d1c596a2f37d274ea0606cd9148b8c130b1dbdf" name="aa2ab67c9c38ca30b0af98d11e2d1c596a2f37d274ea0606cd9148b8c130b1dbdf"></a>kButtonTrigger&#160;</td><td class="fielddoc"><p>按钮触发激活模式 </p>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ae9a8718cb14fd8fbb3c9f6c7697577b4"></a>kEventStartRecognizing&#160;</td><td class="fielddoc"><p>开始识别 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7"></a>kEventRecognizeSuccess&#160;</td><td class="fielddoc"><p>识别成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1ab4b36d84cad9c03d76ce8558a1a024d4"></a>kEventRecognizeTimeout&#160;</td><td class="fielddoc"><p>识别超时 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a058d56fa4853eb7c15585ecbb56ee948"></a>kEventTriggeredByButton&#160;</td><td class="fielddoc"><p>被按键触发唤醒 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46" name="afe0a2cdc1429b3e4efc0ea8bbdcf59c1a28fd42c4948e9c63907e4e8d21b91b46"></a>kEventTriggeredByKeyword&#160;</td><td class="fielddoc"><p>被关键词触发唤醒 </p>
 </td></tr>
 </table>
 
 </div>
 </div>
-<a id="ac42517153137bd3b19356a89ee3de35a" name="ac42517153137bd3b19356a89ee3de35a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac42517153137bd3b19356a89ee3de35a">&#9670;&#160;</a></span>Result</h2>
+<a id="a7de8027579499b036108cbbe404d3bb1" name="a7de8027579499b036108cbbe404d3bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de8027579499b036108cbbe404d3bb1">&#9670;&#160;</a></span>Trigger</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35a">SpeechRecognizer::Result</a> : int8_t</td>
+          <td class="memname">enum <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">SpeechRecognizer::Trigger</a> : uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>语音识别结果 </p>
+<p>触发器 </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ac42517153137bd3b19356a89ee3de35aa691ff0d8e7712d15f3a3f26df45c8afe" name="ac42517153137bd3b19356a89ee3de35aa691ff0d8e7712d15f3a3f26df45c8afe"></a>kResultTimeout&#160;</td><td class="fielddoc"><p>超时 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a7de8027579499b036108cbbe404d3bb1a7b2419b9830a6e4e53a0440d4c1e54d3" name="a7de8027579499b036108cbbe404d3bb1a7b2419b9830a6e4e53a0440d4c1e54d3"></a>kTriggerAuto&#160;</td><td class="fielddoc"><p>自动触发，循环识别 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac42517153137bd3b19356a89ee3de35aa64b704569c300cc7e09374b1cd3ec205" name="ac42517153137bd3b19356a89ee3de35aa64b704569c300cc7e09374b1cd3ec205"></a>kResultNone&#160;</td><td class="fielddoc"><p>无识别结果 </p>
+<tr><td class="fieldname"><a id="a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950" name="a7de8027579499b036108cbbe404d3bb1ab9799d275ced73c7e7891a913ec1b950"></a>kTriggerButton&#160;</td><td class="fielddoc"><p>按键触发 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93" name="a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93"></a>kTriggerKeyword&#160;</td><td class="fielddoc"><p>关键词触发 </p>
 </td></tr>
 </table>
 
@@ -259,24 +277,24 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
 <p>添加语音识别索引词 </p>
 <p>最多可以添加15个词，每个词最大长度为50个字节 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>索引，范围0 ~ 255，多个词可以共用一个索引， </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>索引，范围0 ~ 255，多个词可以共用一个索引，当在关键字触发( <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a523c568ba8e059366639973636f00d93">SpeechRecognizer::kTriggerKeyword</a> )模式下，索引0会被当做关键词 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">identification</td><td>索引词，String类型，最大长度为50个字节 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a5">button_trigger.ino</a>, <a class="el" href="keyword_trigger_8ino-example.html#a5">keyword_trigger.ino</a> , 以及 <a class="el" href="loop_recognition_8ino-example.html#a4">loop_recognition.ino</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#a4">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#a4">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#a6">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a5">trigger_keyword.ino</a>.</dd>
 </dl>
 
 </div>
 </div>
-<a id="a0f18e83dce736dfc2056d62df3ac4383" name="a0f18e83dce736dfc2056d62df3ac4383"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f18e83dce736dfc2056d62df3ac4383">&#9670;&#160;</a></span>GetResult()</h2>
+<a id="a6182e9704116584e15287329147b22a6" name="a6182e9704116584e15287329147b22a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6182e9704116584e15287329147b22a6">&#9670;&#160;</a></span>ReadEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t SpeechRecognizer::GetResult </td>
+          <td class="memname"><a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">SpeechRecognizer::Event</a> SpeechRecognizer::ReadEvent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -284,29 +302,21 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
       </table>
 </div><div class="memdoc">
 
-<p>获取语音识别结果 </p>
-<dl class="section return"><dt>返回</dt><dd>语音识别结果，kResultNone表示无结果，kResultTimeout表示超时 </dd></dl>
-<dl class="retval"><dt>返回值</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35aa691ff0d8e7712d15f3a3f26df45c8afe" title="超时">SpeechRecognizer::kResultTimeout</a></td><td>识别超时 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_speech_recognizer.html#ac42517153137bd3b19356a89ee3de35aa64b704569c300cc7e09374b1cd3ec205" title="无识别结果">SpeechRecognizer::kResultNone</a></td><td>无结果 </td></tr>
-    <tr><td class="paramname">&gt;=0</td><td>索引，由 <a class="el" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a> 设置 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a7">button_trigger.ino</a>, <a class="el" href="keyword_trigger_8ino-example.html#a7">keyword_trigger.ino</a> , 以及 <a class="el" href="loop_recognition_8ino-example.html#a5">loop_recognition.ino</a>.</dd>
+<p>读取事件 </p>
+<dl class="section return"><dt>返回</dt><dd>事件类型，参考枚举: <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1">Event</a> </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#a5">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#a5">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#a7">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a6">trigger_keyword.ino</a>.</dd>
 </dl>
 
 </div>
 </div>
-<a id="a012a13177239c3a6f708f7fe47c4cc95" name="a012a13177239c3a6f708f7fe47c4cc95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a012a13177239c3a6f708f7fe47c4cc95">&#9670;&#160;</a></span>IsActivated()</h2>
+<a id="a7c9b577f042603122c1248c8a2255915" name="a7c9b577f042603122c1248c8a2255915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9b577f042603122c1248c8a2255915">&#9670;&#160;</a></span>ReadResult()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool SpeechRecognizer::IsActivated </td>
+          <td class="memname">uint8_t SpeechRecognizer::ReadResult </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -314,43 +324,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
       </table>
 </div><div class="memdoc">
 
-<p>查询是否已激活 </p>
-<p>每次通过该接口查询之后，系统会自动清除该标记位将其置为false，下次重新激活才会自动置为true； 该接口在自动激活模式( <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596a181db7041e8ee678a10df5c194020cad">kAutoStart</a> )下无效 </p><dl class="retval"><dt>返回值</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>已经激活 </td></tr>
-    <tr><td class="paramname">false</td><td>未激活 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a6">button_trigger.ino</a> , 以及 <a class="el" href="keyword_trigger_8ino-example.html#a6">keyword_trigger.ino</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="ac1f172d193c4b399a537ec5be7c74bcf" name="ac1f172d193c4b399a537ec5be7c74bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1f172d193c4b399a537ec5be7c74bcf">&#9670;&#160;</a></span>SetActivationMode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SpeechRecognizer::SetActivationMode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">ActivationMode</a>&#160;</td>
-          <td class="paramname"><em>speech_recognition_mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>设置激活模式 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">speech_recognition_mode</td><td>激活模式，参考<a class="el" href="class_speech_recognizer.html#aa2ab67c9c38ca30b0af98d11e2d1c596">ActivationMode</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a2">button_trigger.ino</a>, <a class="el" href="keyword_trigger_8ino-example.html#a2">keyword_trigger.ino</a> , 以及 <a class="el" href="loop_recognition_8ino-example.html#a2">loop_recognition.ino</a>.</dd>
+<p>获取语音识别结果，通过 <a class="el" href="class_speech_recognizer.html#a6182e9704116584e15287329147b22a6">ReadEvent()</a> 检测到识别成功( <a class="el" href="class_speech_recognizer.html#afe0a2cdc1429b3e4efc0ea8bbdcf59c1ad39badbabb367552e021c673209241d7">SpeechRecognizer::kEventRecognizeSuccess</a> )的事件后再调用 </p>
+<dl class="section return"><dt>返回</dt><dd>索引词的索引值，由 <a class="el" href="class_speech_recognizer.html#a41a88c6c9d2f5806dd1a190bb5323c5a">AddIdentification</a> 设置 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#a7">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#a8">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#a10">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a9">trigger_keyword.ino</a>.</dd>
 </dl>
 
 </div>
@@ -371,14 +347,42 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
       </table>
 </div><div class="memdoc">
 
-<p>设置操作超时时间 </p>
+<p>设置识别超时时间, 对自动触发( <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1a7b2419b9830a6e4e53a0440d4c1e54d3">SpeechRecognizer::kTriggerAuto</a> )无效 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间，单位毫秒 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a4">button_trigger.ino</a> , 以及 <a class="el" href="keyword_trigger_8ino-example.html#a4">keyword_trigger.ino</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_button_and_keyword_8ino-example.html#a5">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a4">trigger_keyword.ino</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4c61b08a3494d01e0478fa27ff44e93" name="ae4c61b08a3494d01e0478fa27ff44e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c61b08a3494d01e0478fa27ff44e93">&#9670;&#160;</a></span>SetTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpeechRecognizer::SetTrigger </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">Trigger</a>&#160;</td>
+          <td class="paramname"><em>trigger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置触发器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trigger</td><td>触发器，参考枚举: <a class="el" href="class_speech_recognizer.html#a7de8027579499b036108cbbe404d3bb1">Trigger</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#a2">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#a2">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#a2">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a2">trigger_keyword.ino</a>.</dd>
 </dl>
 
 </div>
@@ -411,11 +415,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SpeechRecognizer<
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>成功 </td></tr>
-    <tr><td class="paramname">false</td><td>失败 </td></tr>
+    <tr><td class="paramname">false</td><td>失败，如I2C无法与语音识别模块通讯 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="button_trigger_8ino-example.html#a1">button_trigger.ino</a>, <a class="el" href="keyword_trigger_8ino-example.html#a1">keyword_trigger.ino</a> , 以及 <a class="el" href="loop_recognition_8ino-example.html#a1">loop_recognition.ino</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="trigger_auto_8ino-example.html#a1">trigger_auto.ino</a>, <a class="el" href="trigger_button_8ino-example.html#a1">trigger_button.ino</a>, <a class="el" href="trigger_button_and_keyword_8ino-example.html#a1">trigger_button_and_keyword.ino</a> , 以及 <a class="el" href="trigger_keyword_8ino-example.html#a1">trigger_keyword.ino</a>.</dd>
 </dl>
 
 </div>
